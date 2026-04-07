@@ -9,9 +9,15 @@ pipeline {
             }
         }
 
+<<<<<<< HEAD
        stage('Build Docker Image') {
     steps {
         sh 'docker build -t vasanthsir/devops-app .'
+=======
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t  vasanthsir/devops-app ./app'
+>>>>>>> 1804266 ( update a Jenkins file)
             }
         }	
 
@@ -26,5 +32,11 @@ pipeline {
                 sh 'kubectl apply -f k8s/'
             }
         }
+    }
+}
+stage('Debug Files') {
+    steps {
+        sh 'pwd'
+        sh 'ls -la'
     }
 }
