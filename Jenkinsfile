@@ -9,7 +9,7 @@ pipeline {
 
         stage('Clone Code') {
             steps {
-                git 'https://github.com/vasanthkumartk-boop/Scalable-CI-CD-Pipeline-with-Docker-Kubernetes-AWS.git'
+                git branch: 'main', url: 'https://github.com/vasanthkumartk-boop/Scalable-CI-CD-Pipeline-with-Docker-Kubernetes-AWS.git'
             }
         }
 
