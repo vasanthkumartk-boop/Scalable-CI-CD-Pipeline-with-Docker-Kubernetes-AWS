@@ -7,17 +7,16 @@ pipeline {
             steps {
                 git branch: 'main', url: 'https://github.com/vasanthkumartk-boop/Scalable-CI-CD-Pipeline-with-Docker-Kubernetes-AWS.git'
             }
-        }
+    }
 
-<<<<<<< HEAD
-       stage('Build Docker Image') {
+      stage('Build Docker Image') {
     steps {
         sh 'docker build -t vasanthsir/devops-app .'
-=======
+
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t  vasanthsir/devops-app ./app'
->>>>>>> 1804266 ( update a Jenkins file)
+                sh 'docker build -t  vasanthsir/devops-app .'
+ ( update a Jenkins file)
             }
         }	
 
