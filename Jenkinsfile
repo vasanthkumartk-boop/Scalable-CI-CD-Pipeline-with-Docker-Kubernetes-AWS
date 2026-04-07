@@ -9,11 +9,11 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
-            steps {
-                sh 'vasanthsir/devops-app .'
+       stage('Build Docker Image') {
+    steps {
+        sh 'docker build -t vasanthsir/devops-app .'
             }
-        }
+        }	
 
         stage('Push to DockerHub') {
             steps {
